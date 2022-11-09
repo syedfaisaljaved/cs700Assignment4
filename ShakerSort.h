@@ -9,8 +9,9 @@ private:
     int SIZE_OF_ARRAY;
     int *array;
     void fillArrayWithRandomValues();
-    void shakerSortAscending();
-    void shakerSortDescending();
+    void shakerSortAscending(int);
+    void shakerSortDescending(int);
+    void swap(int &, int &);
     int getArraySizeInput();
 
 public:

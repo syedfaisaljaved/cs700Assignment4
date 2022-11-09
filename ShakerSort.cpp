@@ -16,14 +16,32 @@ void ShakerSort::fillArrayWithRandomValues() {
     }
 }
 
-void ShakerSort::shakerSortAscending() {
-
+void ShakerSort::shakerSortAscending(int arraySize) {
+    for(int i = 0U; i < arraySize; i++){
+        for(int j = i; j < arraySize-1; j++){
+            if(array[j] > array[j+1]){
+                swap(array[j], array[j+1]);
+            }
+        }
+        arraySize--;
+        for(int j = arraySize-1; j > i; j--){
+            if(array[j] < array[j-1]){
+                swap(array[j], array[j-1]);
+            }
+        }
+    }
 }
 
-void ShakerSort::shakerSortDescending() {
+void ShakerSort::shakerSortDescending(int arraySize) {
 
 }
 
 int ShakerSort::getArraySizeInput() {
     return 0;
+}
+
+void ShakerSort::swap(int &item1, int &item2) {
+    int temp = item1;
+    item1 = item2;
+    item2 = temp;
 }
