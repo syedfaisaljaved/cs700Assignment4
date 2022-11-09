@@ -5,7 +5,16 @@
 
 
 class ShakerSort {
+private:
+    int SIZE_OF_ARRAY;
+    int *array;
+    void fillArrayWithRandomValues();
+    void shakerSortAscending();
+    void shakerSortDescending();
+    int getArraySizeInput();
 
+public:
+    void start();
 };
 
 
