@@ -1,8 +1,8 @@
 
 
-#ifndef CS700ASSIGNMENT4_SHAKERSORT_H
-#define CS700ASSIGNMENT4_SHAKERSORT_H
+#pragma once
 
+#include <iostream>
 
 class ShakerSort {
 private:
@@ -13,10 +13,10 @@ private:
     void shakerSortDescending(int);
     void swap(int &, int &);
     void getArraySizeInput();
+    void saveArrayToFile();
+    std::string getFileName();
 
 public:
     void start();
 };
 
-
-#endif //CS700ASSIGNMENT4_SHAKERSORT_H
