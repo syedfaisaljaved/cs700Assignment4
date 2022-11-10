@@ -12,7 +12,7 @@ private:
     void shakerSortAscending(int);
     void shakerSortDescending(int);
     void swap(int &, int &);
-    int getArraySizeInput();
+    void getArraySizeInput();
 
 public:
     void start();

@@ -5,6 +5,8 @@
 #include <iomanip>
 #include "ShakerSort.h"
 
+using namespace std;
+
 void ShakerSort::fillArrayWithRandomValues() {
 
     srand(time(0));
@@ -29,15 +31,36 @@ void ShakerSort::shakerSortAscending(int arraySize) {
                 swap(array[j], array[j-1]);
             }
         }
+        i++;
     }
 }
 
 void ShakerSort::shakerSortDescending(int arraySize) {
-
+    for(int i = 0U; i < arraySize; i++){
+        for(int j = i; j < arraySize-1; j++){
+            if(array[j] < array[j+1]){
+                swap(array[j], array[j+1]);
+            }
+        }
+        arraySize--;
+        for(int j = arraySize-1; j > i; j--){
+            if(array[j] > array[j-1]){
+                swap(array[j], array[j-1]);
+            }
+        }
+        i++;
+    }
 }
 
-int ShakerSort::getArraySizeInput() {
-    return 0;
+void ShakerSort::getArraySizeInput() {
+    cout << "Enter array size: ";
+    cin >> SIZE_OF_ARRAY;
+    if(cin.fail()){
+        cout << "Wrong input. Try again" << endl;
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        getArraySizeInput();
+    }
 }
 
 void ShakerSort::swap(int &item1, int &item2) {
