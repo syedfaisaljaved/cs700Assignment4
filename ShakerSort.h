@@ -7,16 +7,19 @@
 class ShakerSort {
 private:
     int SIZE_OF_ARRAY;
-    int *array;
     void fillArrayWithRandomValues();
-    void shakerSortAscending(int);
-    void shakerSortDescending(int);
+    void shakerSortAscending(int[], int);
+    void shakerSortDescending(int[], int);
     void swap(int &, int &);
     void getArraySizeInput();
-    void saveArrayToFile();
+    void saveArrayToFile(int [], std::string);
+    void readArrayFromFile();
     std::string getFileName();
+    void printExecutionTime(double &);
+    void printDashedLine();
 
 public:
+    ShakerSort();
     void start();
 };
 

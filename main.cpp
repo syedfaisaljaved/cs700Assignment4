@@ -1,6 +1,7 @@
-#include <iostream>
+#include "ShakerSort.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    ShakerSort shakerSort;
+    shakerSort.start();
     return 0;
 }
