@@ -50,7 +50,7 @@ private:
     static std::string getFileName();
     static void printExecutionTime(double &);
     static void printDashedLine();
-
+    double getExecutionTime();
     /// member variables and functions which are public
 public:
     /**
