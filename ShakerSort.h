@@ -34,6 +34,8 @@
  *          @fn start
  * */
 class ShakerSort {
+
+    /// member variables and functions which are private
 private:
     int SIZE_OF_ARRAY;
     void fillArrayWithRandomValues();
@@ -47,7 +49,13 @@ private:
     void printExecutionTime(double &);
     void printDashedLine();
 
+    /// member variables and functions which are public
 public:
+    /**
+     * @brief Constructor taking no param
+     * @param [in] void
+     * @post Post Condition - initialize @a SIZE_OF_ARRAY to 0.
+     * */
     ShakerSort();
     void start();
 };

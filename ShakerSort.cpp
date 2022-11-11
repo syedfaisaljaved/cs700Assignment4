@@ -34,9 +34,9 @@ using namespace std::chrono;
  *          @post Post Condition - multiple functions are called to completely run the program.
  ****************************/
 void ShakerSort::start() {
-    getArraySizeInput();
-    fillArrayWithRandomValues();
-    readArrayFromFile();
+    getArraySizeInput(); /// calling @a getArraySizeInput to get the array size
+    fillArrayWithRandomValues(); /// calling @a fillArrayWithRandomValues to fill the array with random values
+    readArrayFromFile(); /// calling @a readArrayFromFile to read file and perform shaker sort and calculate execution time.
 }
 
 /*****************************
@@ -49,13 +49,18 @@ void ShakerSort::start() {
  *          @post Post Condition - initialize the @a SIZE_OF_ARRAY var value.
  ****************************/
 void ShakerSort::getArraySizeInput() {
-    cout << "Enter array size: ";
-    cin >> SIZE_OF_ARRAY;
+    cout << "Enter array size: "; /// printing a statement to console
+    cin >> SIZE_OF_ARRAY; /// storing the size of array from input
+
+    /**
+     * returns [true] if either (or both) failbit or the badbit error state flags is set for the stream.
+     * @if we encounter a string it will return true as it failed to parse it as an integer.
+     * */
     if(cin.fail()){
         cout << endl << "Wrong input. Try again" << endl << endl;
-        cin.clear();
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        getArraySizeInput();
+        cin.clear(); /// we will clear the error state flags and re-parse the stream properly.
+        cin.ignore(numeric_limits<streamsize>::max(), '\n'); /// function is used which is used to ignore or clear one or more characters from the input buffer.
+        getArraySizeInput(); /// calling @a getArraySizeInput recursively
     }
 }
 
@@ -70,15 +75,21 @@ void ShakerSort::getArraySizeInput() {
  ****************************/
 void ShakerSort::fillArrayWithRandomValues() {
 
+    /**
+     * The pseudo-random number generator is initialized using the argument passed as seed. <br>
+     * For every different seed value used in a call to srand, the pseudo-random number generator can be expected to generate
+     * a different succession of results in the subsequent calls to rand.
+     * passed time(0) function that returns the current time in seconds. <br>
+     * */
     srand(time(0));
 
-    int *array = new int[SIZE_OF_ARRAY];
+    int *array = new int[SIZE_OF_ARRAY]; /// creating an array pointer of integers of size @a SIZE_OF_ARRAY
 
     for (int i = 0U; i < SIZE_OF_ARRAY; i++) {
-        array[i] = rand() % SIZE_OF_ARRAY + 1;
+        array[i] = rand() % SIZE_OF_ARRAY + 1; /// using rand() function to generate a random value from 1 to SIZE_OF_ARRAY
     }
 
-    saveArrayToFile(array, getFileName());
+    saveArrayToFile(array, getFileName()); /// calling @a saveArrayToFile to save the array to a file.
 }
 
 /*****************************
@@ -94,32 +105,43 @@ void ShakerSort::fillArrayWithRandomValues() {
  ****************************/
 void ShakerSort::shakerSortAscending(int array[], int arraySize) {
 
-    bool swapped;
+    bool swapped; /// creating a bool flag to check base conditions of shaker sort
+
     auto startTime = steady_clock::now(); /// storing the time point representing the current time in @c startTime variable.
 
+    /// using for loop to iterate through array
+    /// U as a suffix to 0 means only unsigned values
     for(int i = 0U; i < arraySize; i++){
 
-        swapped = false;
+        swapped = false; /// setting flag to false by default.
+
+        /// using for loop to iterate through array
         for(int j = i; j < arraySize-1; j++){
+            /// @if the current element is greater than the next element then swap
             if(array[j] > array[j+1]){
-                swap(array[j], array[j+1]);
+                swap(array[j], array[j+1]); /// calling function @a swap to swap values of 2 integers.
             }
-            swapped = true;
+            swapped = true; /// setting flag to true if swap is occurred.
         }
 
+        /// @if bool is set to false it means no swap is occurred so the loop will break as the array is already sorted.
         if(!swapped)
             break;
 
-        arraySize--;
+        arraySize--; /// reducing array size so as to not include the sorted element in next iteration.
 
-        swapped = false;
+        swapped = false; /// setting flag to false by default for another loop.
+
+        /// using for loop to iterate through array
         for(int j = arraySize-1; j > i; j--){
+            /// @if the previous element is greater than the current element then swap
             if(array[j] < array[j-1]){
-                swap(array[j], array[j-1]);
+                swap(array[j], array[j-1]);  /// calling function @a swap to swap values of 2 integers.
             }
-            swapped = true;
+            swapped = true; /// setting flag to true if swap is occurred.
         }
 
+        /// @if bool is set to false it means no swap is occurred so the loop will break as the array is already sorted.
         if(!swapped)
             break;
     }
@@ -128,9 +150,9 @@ void ShakerSort::shakerSortAscending(int array[], int arraySize) {
 
     double executionTime = duration_cast<microseconds>(endTime - startTime).count(); /// calculating the elapsed time in millisecond from startTime and endTime.
 
-    printExecutionTime(executionTime);
+    printExecutionTime(executionTime); /// calling @a printExecutionTime to print the execution time.
 
-    saveArrayToFile(array, "shaker_sort_asc");
+    saveArrayToFile(array, "shaker_sort_asc"); /// calling @a saveArrayToFile to save the array to a file.
 }
 
 /*****************************
@@ -146,32 +168,43 @@ void ShakerSort::shakerSortAscending(int array[], int arraySize) {
  ****************************/
 void ShakerSort::shakerSortDescending(int array[], int arraySize) {
 
-    bool swapped;
+    bool swapped; /// creating a bool flag to check base conditions of shaker sort
+
     auto startTime = steady_clock::now(); /// storing the time point representing the current time in @c startTime variable.
 
+    /// using for loop to iterate through array
+    /// U as a suffix to 0 means only unsigned values
     for(int i = 0U; i < arraySize; i++){
 
-        swapped = false;
-        for(int j = i; j < arraySize-i-1; j++){
+        swapped = false; /// setting flag to false by default.
+
+        /// using for loop to iterate through array
+        for(int j = i; j < arraySize-1; j++){
+            /// @if the current element is smaller than the next element then swap
             if(array[j] < array[j+1]){
-                swap(array[j], array[j+1]);
-                swapped = true;
+                swap(array[j], array[j+1]); /// calling function @a swap to swap values of 2 integers.
             }
+            swapped = true; /// setting flag to true if swap is occurred.
         }
 
+        /// @if bool is set to false it means no swap is occurred so the loop will break as the array is already sorted.
         if(!swapped)
             break;
 
-        arraySize--;
+        arraySize--; /// reducing array size so as to not include the sorted element in next iteration.
 
-        swapped = false;
-        for(int j = arraySize-i-1; j > i; j--){
+        swapped = false; /// setting flag to false by default for another loop.
+
+        /// using for loop to iterate through array
+        for(int j = arraySize-1; j > i; j--){
+            /// @if the previous element is smaller than the current element then swap
             if(array[j] > array[j-1]){
-                swap(array[j], array[j-1]);
-                swapped = true;
+                swap(array[j], array[j-1]);  /// calling function @a swap to swap values of 2 integers.
             }
+            swapped = true; /// setting flag to true if swap is occurred.
         }
 
+        /// @if bool is set to false it means no swap is occurred so the loop will break as the array is already sorted.
         if(!swapped)
             break;
     }
@@ -180,10 +213,9 @@ void ShakerSort::shakerSortDescending(int array[], int arraySize) {
 
     double executionTime = duration_cast<microseconds>(endTime - startTime).count(); /// calculating the elapsed time in millisecond from startTime and endTime.
 
-    printExecutionTime(executionTime);
+    printExecutionTime(executionTime); /// calling @a printExecutionTime to print the execution time.
 
-    saveArrayToFile(array, "shaker_sort_desc");
-
+    saveArrayToFile(array, "shaker_sort_asc"); /// calling @a saveArrayToFile to save the array to a file.
 }
 
 /*****************************
@@ -198,9 +230,9 @@ void ShakerSort::shakerSortDescending(int array[], int arraySize) {
  *          @post Post Condition - swaps the values
  ****************************/
 void ShakerSort::swap(int &item1, int &item2) {
-    int temp = item1;
-    item1 = item2;
-    item2 = temp;
+    int temp = item1; /// using a temporary variable to store the first value. <br>
+    item1 = item2; /// assigning the value of 2nd variable to first variable. <br>
+    item2 = temp; /// assigning the value of first variable stored in a temporary variable to the 2nd variable. <br>
 }
 
 /*****************************
@@ -215,7 +247,14 @@ void ShakerSort::swap(int &item1, int &item2) {
  *          @post Post Condition - file is written and saved
  ****************************/
 void ShakerSort::saveArrayToFile(int array[], string fileName) {
+
+    /**
+     * creating an object of output file stream to perform write operations.
+     * takes @c filename as an argument.
+     * */
     ofstream outputStream(fileName);
+
+    /// Checks if the file is NOT opened then throw an error and stop the program.
     if (!outputStream.is_open()) {
         /**
          * throw is a keyword to define custom exceptions.
@@ -224,11 +263,13 @@ void ShakerSort::saveArrayToFile(int array[], string fileName) {
         throw invalid_argument("Unable to open a file to write operations.");
     }
 
+    /// using for loop to iterate through array
+    /// U as a suffix to 0 means only unsigned values
     for(int i = 0U; i < SIZE_OF_ARRAY; i++){
-        outputStream << array[i] << " ";
+        outputStream << array[i] << " "; /// store the array value to file.
     }
 
-    outputStream.close();
+    outputStream.close(); /// closing the @c outputStream after performing the write operations.
 }
 
 /*****************************
@@ -256,18 +297,18 @@ void ShakerSort::readArrayFromFile() {
         throw invalid_argument("Unable to read file.");
     }
 
-    int *shakerSortAscArray = new int[SIZE_OF_ARRAY];
-    int *shakerSortDescArray = new int[SIZE_OF_ARRAY];
-    int arrayElement;
-    int index = 0U;
+    int *shakerSortAscArray = new int[SIZE_OF_ARRAY]; /// creating an array for shaker sort ascending order
+    int *shakerSortDescArray = new int[SIZE_OF_ARRAY]; /// creating an array for shaker sort descending order
+    int arrayElement; /// creating a variable to store values from file after each iteration.
+    int index = 0U; /// creating a variable to loop through the array
     while(fileStream >> arrayElement){
-        shakerSortAscArray[index] = arrayElement;
-        shakerSortDescArray[index] = arrayElement;
-        index++;
+        shakerSortAscArray[index] = arrayElement; /// storing the value to array from stream
+        shakerSortDescArray[index] = arrayElement; /// storing the value to array from stream
+        index++; /// incrementing the index
     }
 
-    shakerSortAscending(shakerSortAscArray, SIZE_OF_ARRAY);
-    shakerSortDescending(shakerSortDescArray, SIZE_OF_ARRAY);
+    shakerSortAscending(shakerSortAscArray, SIZE_OF_ARRAY); /// calling @a shakerSortAscending to sort the array
+    shakerSortDescending(shakerSortDescArray, SIZE_OF_ARRAY); /// calling @a shakerSortDescending to sort the array
 
 }
 
@@ -281,7 +322,7 @@ void ShakerSort::readArrayFromFile() {
  *          @post Post Condition - returns the file name
  ****************************/
 string ShakerSort::getFileName() {
-    return "shaker_sort_output";
+    return "shaker_sort_output"; /// return the file name
 }
 
 /*****************************
@@ -295,10 +336,10 @@ string ShakerSort::getFileName() {
  *          @post Post Condition - prints to console
  ****************************/
 void ShakerSort::printExecutionTime(double &executionTime) {
-    printDashedLine();
-    cout << "Execution time for Ascending Shaker sort is: " << fixed << showpoint << setprecision(5) << executionTime << " microseconds" << endl;
-    printDashedLine();
-    cout << endl;
+    printDashedLine(); /// print a * line to console.
+    cout << "Execution time for Ascending Shaker sort is: " << fixed << showpoint << setprecision(5) << executionTime << " microseconds" << endl; /// print execution time to console.
+    printDashedLine(); /// print a * line to console.
+    cout << endl; /// printing newline
 }
 
 /*****************************
@@ -311,7 +352,7 @@ void ShakerSort::printExecutionTime(double &executionTime) {
  *          @post Post Condition - print to console
  ****************************/
 void ShakerSort::printDashedLine() {
-    cout << "***********************************************************" << endl;
+    cout << "***********************************************************" << endl; /// printing * line to console
 }
 
 ShakerSort::ShakerSort() {
