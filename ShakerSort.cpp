@@ -149,7 +149,7 @@ void ShakerSort::shakerSortAscending(int array[], int arraySize) {
 
     auto endTime = high_resolution_clock::now(); /// storing the time point representing the current time in @c endTime variable.
 
-    double executionTime = duration_cast<nanoseconds>(endTime - startTime).count(); /// calculating the elapsed time in millisecond from startTime and endTime.
+    long executionTime = duration_cast<nanoseconds>(endTime - startTime).count(); /// calculating the elapsed time in millisecond from startTime and endTime.
 
     printExecutionTime(executionTime); /// calling @a printExecutionTime to print the execution time.
 
@@ -212,7 +212,7 @@ void ShakerSort::shakerSortDescending(int array[], int arraySize) {
 
     auto endTime = high_resolution_clock::now(); /// storing the time point representing the current time in @c endTime variable.
 
-    double executionTime = duration_cast<nanoseconds>(endTime - startTime).count(); /// calculating the elapsed time in millisecond from startTime and endTime.
+    long executionTime = duration_cast<nanoseconds>(endTime - startTime).count(); /// calculating the elapsed time in millisecond from startTime and endTime.
 
     printExecutionTime(executionTime); /// calling @a printExecutionTime to print the execution time.
 
@@ -336,7 +336,7 @@ string ShakerSort::getFileName() {
  *          @pre Pre Condition - a double value is passed
  *          @post Post Condition - prints to console
  ****************************/
-void ShakerSort::printExecutionTime(double &executionTime) {
+void ShakerSort::printExecutionTime(long &executionTime) {
     printDashedLine(); /// print a * line to console.
     cout << "Execution time for Ascending Shaker sort is: " << getExecutionTime(executionTime) << endl; /// print execution time to console.
     printDashedLine(); /// print a * line to console.
@@ -360,7 +360,7 @@ ShakerSort::ShakerSort() {
     SIZE_OF_ARRAY = 0; /// variable @a ShakerSort::SIZE_OF_ARRAY is initialized in the constructor.
 }
 
-string ShakerSort::getExecutionTime(double &executionTime) {
+string ShakerSort::getExecutionTime(long &executionTime) {
     ostringstream oss;
     oss << fixed << showpoint << setprecision(5);
     if(executionTime > 1000000.0){
