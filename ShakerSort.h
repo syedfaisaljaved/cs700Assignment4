@@ -43,13 +43,13 @@ private:
     void fillArrayWithRandomValues();
     void shakerSortAscending(int[], int);
     void shakerSortDescending(int[], int);
-    void swap(int &, int &);
+    static void swap(int &, int &);
     void getArraySizeInput();
-    void saveArrayToFile(int [], std::string);
+    void saveArrayToFile(int [], const std::string&) const;
     void readArrayFromFile();
-    std::string getFileName();
-    void printExecutionTime(double &);
-    void printDashedLine();
+    static std::string getFileName();
+    static void printExecutionTime(double &);
+    static void printDashedLine();
 
     /// member variables and functions which are public
 public:

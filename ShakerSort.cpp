@@ -215,7 +215,7 @@ void ShakerSort::shakerSortDescending(int array[], int arraySize) {
 
     printExecutionTime(executionTime); /// calling @a printExecutionTime to print the execution time.
 
-    saveArrayToFile(array, "shaker_sort_asc"); /// calling @a saveArrayToFile to save the array to a file.
+    saveArrayToFile(array, "shaker_sort_desc"); /// calling @a saveArrayToFile to save the array to a file.
 }
 
 /*****************************
@@ -246,7 +246,7 @@ void ShakerSort::swap(int &item1, int &item2) {
  *          @pre Pre Condition - an array and a string is passed
  *          @post Post Condition - file is written and saved
  ****************************/
-void ShakerSort::saveArrayToFile(int array[], string fileName) {
+void ShakerSort::saveArrayToFile(int array[], const string& fileName) const {
 
     /**
      * creating an object of output file stream to perform write operations.
