@@ -153,7 +153,7 @@ void ShakerSort::shakerSortAscending(int array[], int arraySize) {
 
     printExecutionTime(executionTime, "Ascending"); /// calling @a printExecutionTime to print the execution time.
 
-    saveArrayToFile(array, "shaker_sort_asc"); /// calling @a saveArrayToFile to save the array to a file.
+    saveArrayToFile(array, "shaker_sort_asc.txt"); /// calling @a saveArrayToFile to save the array to a file.
 }
 
 /*****************************
@@ -216,7 +216,7 @@ void ShakerSort::shakerSortDescending(int array[], int arraySize) {
 
     printExecutionTime(executionTime, "Descending"); /// calling @a printExecutionTime to print the execution time.
 
-    saveArrayToFile(array, "shaker_sort_desc"); /// calling @a saveArrayToFile to save the array to a file.
+    saveArrayToFile(array, "shaker_sort_desc.txt"); /// calling @a saveArrayToFile to save the array to a file.
 }
 
 /*****************************
@@ -323,7 +323,7 @@ void ShakerSort::readArrayFromFile() {
  *          @post Post Condition - returns the file name
  ****************************/
 string ShakerSort::getFileName() {
-    return "shaker_sort_output"; /// return the file name
+    return "shaker_sort_output.txt"; /// return the file name
 }
 
 /*****************************
