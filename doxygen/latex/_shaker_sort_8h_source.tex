@@ -1,0 +1,169 @@
+\hypertarget{_shaker_sort_8h_source}{}\doxysection{Shaker\+Sort.\+h}
+\mbox{\hyperlink{_shaker_sort_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*****************************}}
+\DoxyCodeLine{2 \textcolor{comment}{ * @name Module Name: Shaker Sort. <br>}}
+\DoxyCodeLine{3 \textcolor{comment}{ * @author Faisal Javed <br>}}
+\DoxyCodeLine{4 \textcolor{comment}{ * @date 10th November, 2022 <br>}}
+\DoxyCodeLine{5 \textcolor{comment}{ * Purpose: CS-\/700 Assignment 4 <br>}}
+\DoxyCodeLine{6 \textcolor{comment}{ * Student ID: 200491169 <br>}}
+\DoxyCodeLine{7 \textcolor{comment}{ ****************************/}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{28 \textcolor{keyword}{class }\mbox{\hyperlink{class_shaker_sort}{ShakerSort}} \{}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{keyword}{private}:}
+\DoxyCodeLine{34     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_shaker_sort_a94da472a9a0a954db5b1ec0bbae1cbe3}{SIZE\_OF\_ARRAY}};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{comment}{/*****************************}}
+\DoxyCodeLine{37 \textcolor{comment}{ * Module Name: Shaker Sort. <br>}}
+\DoxyCodeLine{38 \textcolor{comment}{ * Author: Faisal Javed <br>}}
+\DoxyCodeLine{39 \textcolor{comment}{ * Date of Creation: 10th November, 2022 <br>}}
+\DoxyCodeLine{40 \textcolor{comment}{ * Purpose: Array is filled with random values <br>}}
+\DoxyCodeLine{41 \textcolor{comment}{ *          @param [in] void}}
+\DoxyCodeLine{42 \textcolor{comment}{ *          @return [out] void}}
+\DoxyCodeLine{43 \textcolor{comment}{ *          @post Post Condition -\/ array is filled with random values.}}
+\DoxyCodeLine{44 \textcolor{comment}{ ****************************/}}
+\DoxyCodeLine{45     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shaker_sort_abedc1f3153f80b0ec047b65da6db07a7}{fillArrayWithRandomValues}}();}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{comment}{/*****************************}}
+\DoxyCodeLine{48 \textcolor{comment}{ * Module Name: Shaker Sort. <br>}}
+\DoxyCodeLine{49 \textcolor{comment}{ * Author: Faisal Javed <br>}}
+\DoxyCodeLine{50 \textcolor{comment}{ * Date of Creation: 10th November, 2022 <br>}}
+\DoxyCodeLine{51 \textcolor{comment}{ * Purpose: sort array bi-\/directionally using shaker sort technique in ascending order <br>}}
+\DoxyCodeLine{52 \textcolor{comment}{ *          @param [in] array}}
+\DoxyCodeLine{53 \textcolor{comment}{ *          @param [in] arraySize}}
+\DoxyCodeLine{54 \textcolor{comment}{ *          @return [out] void}}
+\DoxyCodeLine{55 \textcolor{comment}{ *          @pre Pre Condition -\/ an array and an integer is passed.}}
+\DoxyCodeLine{56 \textcolor{comment}{ *          @post Post Condition -\/ array is sorted using shaker sort in ascending order.}}
+\DoxyCodeLine{57 \textcolor{comment}{ ****************************/}}
+\DoxyCodeLine{58     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shaker_sort_acda1df8f4328c2bb08671a165e7371e2}{shakerSortAscending}}(\textcolor{keywordtype}{int}[], \textcolor{keywordtype}{int});}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \textcolor{comment}{/*****************************}}
+\DoxyCodeLine{61 \textcolor{comment}{ * Module Name: Shaker Sort. <br>}}
+\DoxyCodeLine{62 \textcolor{comment}{ * Author: Faisal Javed <br>}}
+\DoxyCodeLine{63 \textcolor{comment}{ * Date of Creation: 10th November, 2022 <br>}}
+\DoxyCodeLine{64 \textcolor{comment}{ * Purpose: sort array bi-\/directionally using shaker sort technique in descending order <br>}}
+\DoxyCodeLine{65 \textcolor{comment}{ *          @param [in] array}}
+\DoxyCodeLine{66 \textcolor{comment}{ *          @param [in] arraySize}}
+\DoxyCodeLine{67 \textcolor{comment}{ *          @return [out] void}}
+\DoxyCodeLine{68 \textcolor{comment}{ *          @pre Pre Condition -\/ an array and an integer is passed.}}
+\DoxyCodeLine{69 \textcolor{comment}{ *          @post Post Condition -\/ array is sorted using shaker sort in descending order.}}
+\DoxyCodeLine{70 \textcolor{comment}{ ****************************/}}
+\DoxyCodeLine{71     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shaker_sort_a55fca465b31ddb551f7e186d0b08837e}{shakerSortDescending}}(\textcolor{keywordtype}{int}[], \textcolor{keywordtype}{int});}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73 \textcolor{comment}{/*****************************}}
+\DoxyCodeLine{74 \textcolor{comment}{ * Module Name: Shaker Sort. <br>}}
+\DoxyCodeLine{75 \textcolor{comment}{ * Author: Faisal Javed <br>}}
+\DoxyCodeLine{76 \textcolor{comment}{ * Date of Creation: 10th November, 2022 <br>}}
+\DoxyCodeLine{77 \textcolor{comment}{ * Purpose: swapping 2 values}}
+\DoxyCodeLine{78 \textcolor{comment}{ *          @param [in] item1}}
+\DoxyCodeLine{79 \textcolor{comment}{ *          @param [in] item2}}
+\DoxyCodeLine{80 \textcolor{comment}{ *          @return [out] void}}
+\DoxyCodeLine{81 \textcolor{comment}{ *          @pre Pre Condition -\/ 2 integers are passed}}
+\DoxyCodeLine{82 \textcolor{comment}{ *          @post Post Condition -\/ swaps the values}}
+\DoxyCodeLine{83 \textcolor{comment}{ ****************************/}}
+\DoxyCodeLine{84     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shaker_sort_a07fd65f2701fcdc9f952bef732e2b660}{swap}}(\textcolor{keywordtype}{int} \&, \textcolor{keywordtype}{int} \&);}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86 \textcolor{comment}{/*****************************}}
+\DoxyCodeLine{87 \textcolor{comment}{ * Module Name: Shaker Sort. <br>}}
+\DoxyCodeLine{88 \textcolor{comment}{ * Author: Faisal Javed <br>}}
+\DoxyCodeLine{89 \textcolor{comment}{ * Date of Creation: 10th November, 2022 <br>}}
+\DoxyCodeLine{90 \textcolor{comment}{ * Purpose: the function takes input for array size. it is a recursive function. it will re-\/run if wrong input is given <br>}}
+\DoxyCodeLine{91 \textcolor{comment}{ *          @param [in] void}}
+\DoxyCodeLine{92 \textcolor{comment}{ *          @return [out] void}}
+\DoxyCodeLine{93 \textcolor{comment}{ *          @post Post Condition -\/ initialize the @a ShakerSort::SIZE\_OF\_ARRAY var value.}}
+\DoxyCodeLine{94 \textcolor{comment}{ ****************************/}}
+\DoxyCodeLine{95     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shaker_sort_adbd9eff499e03fb85baf930fb3970b31}{getArraySizeInput}}();}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97 \textcolor{comment}{/*****************************}}
+\DoxyCodeLine{98 \textcolor{comment}{ * Module Name: Shaker Sort. <br>}}
+\DoxyCodeLine{99 \textcolor{comment}{ * Author: Faisal Javed <br>}}
+\DoxyCodeLine{100 \textcolor{comment}{ * Date of Creation: 10th November, 2022 <br>}}
+\DoxyCodeLine{101 \textcolor{comment}{ * Purpose: the function saves the array onto a file <br>}}
+\DoxyCodeLine{102 \textcolor{comment}{ *          @param [in] array}}
+\DoxyCodeLine{103 \textcolor{comment}{ *          @param [in] fileName}}
+\DoxyCodeLine{104 \textcolor{comment}{ *          @return [out] void}}
+\DoxyCodeLine{105 \textcolor{comment}{ *          @pre Pre Condition -\/ an array and a string is passed}}
+\DoxyCodeLine{106 \textcolor{comment}{ *          @post Post Condition -\/ file is written and saved}}
+\DoxyCodeLine{107 \textcolor{comment}{ ****************************/}}
+\DoxyCodeLine{108     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shaker_sort_ac4717afc4b962655e296d7c7acd1e47a}{saveArrayToFile}}(\textcolor{keywordtype}{int} [], \textcolor{keyword}{const} std::string\&) \textcolor{keyword}{const};}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110 \textcolor{comment}{/*****************************}}
+\DoxyCodeLine{111 \textcolor{comment}{ * Module Name: Shaker Sort. <br>}}
+\DoxyCodeLine{112 \textcolor{comment}{ * Author: Faisal Javed <br>}}
+\DoxyCodeLine{113 \textcolor{comment}{ * Date of Creation: 10th November, 2022 <br>}}
+\DoxyCodeLine{114 \textcolor{comment}{ * Purpose: the function reads the file stores it in an array <br>}}
+\DoxyCodeLine{115 \textcolor{comment}{ *          @param [in] void}}
+\DoxyCodeLine{116 \textcolor{comment}{ *          @return [out] void}}
+\DoxyCodeLine{117 \textcolor{comment}{ *          @post Post Condition -\/ file is read and an array is created}}
+\DoxyCodeLine{118 \textcolor{comment}{ ****************************/}}
+\DoxyCodeLine{119     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shaker_sort_a1ab376ba8f611823ae366bdb42239c3e}{readArrayFromFile}}();}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121 \textcolor{comment}{/*****************************}}
+\DoxyCodeLine{122 \textcolor{comment}{ * Module Name: Shaker Sort. <br>}}
+\DoxyCodeLine{123 \textcolor{comment}{ * Author: Faisal Javed <br>}}
+\DoxyCodeLine{124 \textcolor{comment}{ * Date of Creation: 10th November, 2022 <br>}}
+\DoxyCodeLine{125 \textcolor{comment}{ * Purpose: the function returns the filename <br>}}
+\DoxyCodeLine{126 \textcolor{comment}{ *          @param [in] void}}
+\DoxyCodeLine{127 \textcolor{comment}{ *          @return [out] string}}
+\DoxyCodeLine{128 \textcolor{comment}{ *          @post Post Condition -\/ returns the file name}}
+\DoxyCodeLine{129 \textcolor{comment}{ ****************************/}}
+\DoxyCodeLine{130     \textcolor{keyword}{static} std::string \mbox{\hyperlink{class_shaker_sort_a04ff6a56f12e219624783901b4192d3a}{getFileName}}();}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132 \textcolor{comment}{/*****************************}}
+\DoxyCodeLine{133 \textcolor{comment}{ * Module Name: Shaker Sort. <br>}}
+\DoxyCodeLine{134 \textcolor{comment}{ * Author: Faisal Javed <br>}}
+\DoxyCodeLine{135 \textcolor{comment}{ * Date of Creation: 10th November, 2022 <br>}}
+\DoxyCodeLine{136 \textcolor{comment}{ * Purpose: the function prints the argument to the console with other information <br>}}
+\DoxyCodeLine{137 \textcolor{comment}{ *          @param [in] executionTime}}
+\DoxyCodeLine{138 \textcolor{comment}{ *          @param [in] sortType}}
+\DoxyCodeLine{139 \textcolor{comment}{ *          @return [out] void}}
+\DoxyCodeLine{140 \textcolor{comment}{ *          @pre Pre Condition -\/ a double value and a string is passed}}
+\DoxyCodeLine{141 \textcolor{comment}{ *          @post Post Condition -\/ prints to console}}
+\DoxyCodeLine{142 \textcolor{comment}{ ****************************/}}
+\DoxyCodeLine{143     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shaker_sort_a693841e67b54dd0c35145173e51e1a4b}{printExecutionTime}}(\textcolor{keywordtype}{long} \&, \textcolor{keyword}{const} std::string\&);}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{145 \textcolor{comment}{/*****************************}}
+\DoxyCodeLine{146 \textcolor{comment}{ * Module Name: Shaker Sort. <br>}}
+\DoxyCodeLine{147 \textcolor{comment}{ * Author: Faisal Javed <br>}}
+\DoxyCodeLine{148 \textcolor{comment}{ * Date of Creation: 10th November, 2022 <br>}}
+\DoxyCodeLine{149 \textcolor{comment}{ * Purpose: the function prints a * line to console <br>}}
+\DoxyCodeLine{150 \textcolor{comment}{ *          @param [in] void}}
+\DoxyCodeLine{151 \textcolor{comment}{ *          @return [out] void}}
+\DoxyCodeLine{152 \textcolor{comment}{ *          @post Post Condition -\/ print to console}}
+\DoxyCodeLine{153 \textcolor{comment}{ ****************************/}}
+\DoxyCodeLine{154     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shaker_sort_a81022f0bca715bdd5c1cb2542c84aef8}{printAsteriskLine}}();}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{156 \textcolor{comment}{/*****************************}}
+\DoxyCodeLine{157 \textcolor{comment}{ * Module Name: Shaker Sort. <br>}}
+\DoxyCodeLine{158 \textcolor{comment}{ * Author: Faisal Javed <br>}}
+\DoxyCodeLine{159 \textcolor{comment}{ * Date of Creation: 10th November, 2022 <br>}}
+\DoxyCodeLine{160 \textcolor{comment}{ * Purpose: the function returns a string in formatted fashion <br>}}
+\DoxyCodeLine{161 \textcolor{comment}{ *          @param [in] executionTime}}
+\DoxyCodeLine{162 \textcolor{comment}{ *          @return [out] string}}
+\DoxyCodeLine{163 \textcolor{comment}{ *          @pre Pre Condition -\/ a long value is passed}}
+\DoxyCodeLine{164 \textcolor{comment}{ *          @post Post Condition -\/ returns a string}}
+\DoxyCodeLine{165 \textcolor{comment}{ ****************************/}}
+\DoxyCodeLine{166     \textcolor{keyword}{static} std::string \mbox{\hyperlink{class_shaker_sort_acb0b182e6df40176cf780504e1ddc444}{getExecutionTime}}(\textcolor{keywordtype}{long} \&);}
+\DoxyCodeLine{167 }
+\DoxyCodeLine{168 \textcolor{keyword}{public}:}
+\DoxyCodeLine{173     \mbox{\hyperlink{class_shaker_sort_ada404564dee64277112d8d1f83c3dc2d}{ShakerSort}}();}
+\DoxyCodeLine{174 }
+\DoxyCodeLine{175 \textcolor{comment}{/*****************************}}
+\DoxyCodeLine{176 \textcolor{comment}{ * Module Name: Shaker Sort. <br>}}
+\DoxyCodeLine{177 \textcolor{comment}{ * Author: Faisal Javed <br>}}
+\DoxyCodeLine{178 \textcolor{comment}{ * Date of Creation: 10th November, 2022 <br>}}
+\DoxyCodeLine{179 \textcolor{comment}{ * Purpose: the program starts from here, every function is called within this function for this program to work fine <br>}}
+\DoxyCodeLine{180 \textcolor{comment}{ *          @param [in] void}}
+\DoxyCodeLine{181 \textcolor{comment}{ *          @return [out] void}}
+\DoxyCodeLine{182 \textcolor{comment}{ *          @post Post Condition -\/ multiple functions are called to completely run the program.}}
+\DoxyCodeLine{183 \textcolor{comment}{ ****************************/}}
+\DoxyCodeLine{184     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shaker_sort_a6cf44c296698148811266a5eab27aadc}{start}}();}
+\DoxyCodeLine{185 \};}
+\DoxyCodeLine{186 }
+
+\end{DoxyCode}

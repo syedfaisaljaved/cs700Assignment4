@@ -1,0 +1,654 @@
+\hypertarget{class_shaker_sort}{}\doxysection{Shaker\+Sort Class Reference}
+\label{class_shaker_sort}\index{ShakerSort@{ShakerSort}}
+
+
+library that controls reading from and writing to the standard streams. ~\newline
+  
+
+
+
+
+{\ttfamily \#include $<$Shaker\+Sort.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_shaker_sort_ada404564dee64277112d8d1f83c3dc2d}{Shaker\+Sort}} ()
+\begin{DoxyCompactList}\small\item\em Constructor taking no param. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shaker_sort_a6cf44c296698148811266a5eab27aadc}{start}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_shaker_sort_abedc1f3153f80b0ec047b65da6db07a7}{fill\+Array\+With\+Random\+Values}} ()
+\item 
+void \mbox{\hyperlink{class_shaker_sort_adbd9eff499e03fb85baf930fb3970b31}{get\+Array\+Size\+Input}} ()
+\item 
+void \mbox{\hyperlink{class_shaker_sort_a1ab376ba8f611823ae366bdb42239c3e}{read\+Array\+From\+File}} ()
+\item 
+void \mbox{\hyperlink{class_shaker_sort_ac4717afc4b962655e296d7c7acd1e47a}{save\+Array\+To\+File}} (int\mbox{[}$\,$\mbox{]}, const std\+::string \&) const
+\item 
+void \mbox{\hyperlink{class_shaker_sort_acda1df8f4328c2bb08671a165e7371e2}{shaker\+Sort\+Ascending}} (int\mbox{[}$\,$\mbox{]}, int)
+\item 
+void \mbox{\hyperlink{class_shaker_sort_a55fca465b31ddb551f7e186d0b08837e}{shaker\+Sort\+Descending}} (int\mbox{[}$\,$\mbox{]}, int)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{class_shaker_sort_acb0b182e6df40176cf780504e1ddc444}{get\+Execution\+Time}} (long \&)
+\item 
+static std\+::string \mbox{\hyperlink{class_shaker_sort_a04ff6a56f12e219624783901b4192d3a}{get\+File\+Name}} ()
+\item 
+static void \mbox{\hyperlink{class_shaker_sort_a81022f0bca715bdd5c1cb2542c84aef8}{print\+Asterisk\+Line}} ()
+\item 
+static void \mbox{\hyperlink{class_shaker_sort_a693841e67b54dd0c35145173e51e1a4b}{print\+Execution\+Time}} (long \&, const std\+::string \&)
+\item 
+static void \mbox{\hyperlink{class_shaker_sort_a07fd65f2701fcdc9f952bef732e2b660}{swap}} (int \&, int \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_shaker_sort_a94da472a9a0a954db5b1ec0bbae1cbe3}{SIZE\+\_\+\+OF\+\_\+\+ARRAY}}
+\begin{DoxyCompactList}\small\item\em stores size of array ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+library that controls reading from and writing to the standard streams. ~\newline
+ 
+
+~\newline
+ Module Name\+: Shaker Sort. ~\newline
+ Author\+: Faisal Javed ~\newline
+ Date of Creation\+: 10th November, 2022 ~\newline
+ Purpose\+: Class is a user-\/defined data type, which holds its own data members and member functions, which can be accessed and used by creating an instance of that class. Defining class \mbox{\hyperlink{class_shaker_sort}{Shaker\+Sort}} which contains variables, methods and constructors. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_shaker_sort_ada404564dee64277112d8d1f83c3dc2d}\label{class_shaker_sort_ada404564dee64277112d8d1f83c3dc2d}} 
+\index{ShakerSort@{ShakerSort}!ShakerSort@{ShakerSort}}
+\index{ShakerSort@{ShakerSort}!ShakerSort@{ShakerSort}}
+\doxysubsubsection{\texorpdfstring{ShakerSort()}{ShakerSort()}}
+{\footnotesize\ttfamily Shaker\+Sort\+::\+Shaker\+Sort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor taking no param. 
+
+\begin{DoxyPostcond}{Postcondition}
+Post Condition -\/ initialized array size var to 0. 
+\end{DoxyPostcond}
+variable {\itshape \mbox{\hyperlink{class_shaker_sort_a94da472a9a0a954db5b1ec0bbae1cbe3}{Shaker\+Sort\+::\+SIZE\+\_\+\+OF\+\_\+\+ARRAY}}} is initialized in the constructor.
+\begin{DoxyCode}{0}
+\DoxyCodeLine{36                        \{}
+\DoxyCodeLine{37     \mbox{\hyperlink{class_shaker_sort_a94da472a9a0a954db5b1ec0bbae1cbe3}{SIZE\_OF\_ARRAY}} = 0; }
+\DoxyCodeLine{38 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{class_shaker_sort_a94da472a9a0a954db5b1ec0bbae1cbe3}{SIZE\+\_\+\+OF\+\_\+\+ARRAY}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_shaker_sort_abedc1f3153f80b0ec047b65da6db07a7}\label{class_shaker_sort_abedc1f3153f80b0ec047b65da6db07a7}} 
+\index{ShakerSort@{ShakerSort}!fillArrayWithRandomValues@{fillArrayWithRandomValues}}
+\index{fillArrayWithRandomValues@{fillArrayWithRandomValues}!ShakerSort@{ShakerSort}}
+\doxysubsubsection{\texorpdfstring{fillArrayWithRandomValues()}{fillArrayWithRandomValues()}}
+{\footnotesize\ttfamily void Shaker\+Sort\+::fill\+Array\+With\+Random\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+The pseudo-\/random number generator is initialized using the argument passed as seed. ~\newline
+ For every different seed value used in a call to srand, the pseudo-\/random number generator can be expected to generate a different succession of results in the subsequent calls to rand. passed time(0) function that returns the current time in seconds. ~\newline
+
+
+creating an array pointer of integers of size {\itshape \mbox{\hyperlink{class_shaker_sort_a94da472a9a0a954db5b1ec0bbae1cbe3}{Shaker\+Sort\+::\+SIZE\+\_\+\+OF\+\_\+\+ARRAY}}} 
+
+using rand() function to generate a random value from 1 to SIZE\+\_\+\+OF\+\_\+\+ARRAY
+
+calling {\itshape \mbox{\hyperlink{class_shaker_sort_ac4717afc4b962655e296d7c7acd1e47a}{Shaker\+Sort\+::save\+Array\+To\+File}}} to save the array to a file.
+\begin{DoxyCode}{0}
+\DoxyCodeLine{89                                            \{}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{97     srand(time(0));}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99     \textcolor{keywordtype}{int} *array = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[\mbox{\hyperlink{class_shaker_sort_a94da472a9a0a954db5b1ec0bbae1cbe3}{SIZE\_OF\_ARRAY}}]; }
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0U; i < \mbox{\hyperlink{class_shaker_sort_a94da472a9a0a954db5b1ec0bbae1cbe3}{SIZE\_OF\_ARRAY}}; i++) \{}
+\DoxyCodeLine{102         array[i] = rand() \% \mbox{\hyperlink{class_shaker_sort_a94da472a9a0a954db5b1ec0bbae1cbe3}{SIZE\_OF\_ARRAY}} + 1; }
+\DoxyCodeLine{103     \}}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105     \mbox{\hyperlink{class_shaker_sort_ac4717afc4b962655e296d7c7acd1e47a}{saveArrayToFile}}(array, \mbox{\hyperlink{class_shaker_sort_a04ff6a56f12e219624783901b4192d3a}{getFileName}}()); }
+\DoxyCodeLine{106 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{class_shaker_sort_a04ff6a56f12e219624783901b4192d3a}{get\+File\+Name()}}, \mbox{\hyperlink{class_shaker_sort_ac4717afc4b962655e296d7c7acd1e47a}{save\+Array\+To\+File()}}, and \mbox{\hyperlink{class_shaker_sort_a94da472a9a0a954db5b1ec0bbae1cbe3}{SIZE\+\_\+\+OF\+\_\+\+ARRAY}}.
+
+
+
+Referenced by \mbox{\hyperlink{class_shaker_sort_a6cf44c296698148811266a5eab27aadc}{start()}}.
+
+\mbox{\Hypertarget{class_shaker_sort_adbd9eff499e03fb85baf930fb3970b31}\label{class_shaker_sort_adbd9eff499e03fb85baf930fb3970b31}} 
+\index{ShakerSort@{ShakerSort}!getArraySizeInput@{getArraySizeInput}}
+\index{getArraySizeInput@{getArraySizeInput}!ShakerSort@{ShakerSort}}
+\doxysubsubsection{\texorpdfstring{getArraySizeInput()}{getArraySizeInput()}}
+{\footnotesize\ttfamily void Shaker\+Sort\+::get\+Array\+Size\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+printing a statement to console
+
+storing the size of array from input
+
+returns \mbox{[}true\mbox{]} if either (or both) failbit or the badbit error state flags is set for the stream. if we encounter a string it will return true as it failed to parse it as an integer.
+
+we will clear the error state flags and re-\/parse the stream properly.
+
+function is used which is used to ignore or clear one or more characters from the input buffer.
+
+calling {\itshape \mbox{\hyperlink{class_shaker_sort_adbd9eff499e03fb85baf930fb3970b31}{Shaker\+Sort\+::get\+Array\+Size\+Input}}} recursively
+\begin{DoxyCode}{0}
+\DoxyCodeLine{64                                    \{}
+\DoxyCodeLine{65     cout << \textcolor{stringliteral}{"{}Enter array size: "{}}; }
+\DoxyCodeLine{66     cin >> \mbox{\hyperlink{class_shaker_sort_a94da472a9a0a954db5b1ec0bbae1cbe3}{SIZE\_OF\_ARRAY}}; }
+\DoxyCodeLine{67 }
+\DoxyCodeLine{72     \textcolor{keywordflow}{if}(cin.fail())\{}
+\DoxyCodeLine{73         cout << endl << \textcolor{stringliteral}{"{}Wrong input. Try again"{}} << endl << endl;}
+\DoxyCodeLine{74         cin.clear(); }
+\DoxyCodeLine{75         cin.ignore(numeric\_limits<streamsize>::max(), \textcolor{charliteral}{'\(\backslash\)n'}); }
+\DoxyCodeLine{76         \mbox{\hyperlink{class_shaker_sort_adbd9eff499e03fb85baf930fb3970b31}{getArraySizeInput}}(); }
+\DoxyCodeLine{77     \}}
+\DoxyCodeLine{78 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{class_shaker_sort_adbd9eff499e03fb85baf930fb3970b31}{get\+Array\+Size\+Input()}}, and \mbox{\hyperlink{class_shaker_sort_a94da472a9a0a954db5b1ec0bbae1cbe3}{SIZE\+\_\+\+OF\+\_\+\+ARRAY}}.
+
+
+
+Referenced by \mbox{\hyperlink{class_shaker_sort_adbd9eff499e03fb85baf930fb3970b31}{get\+Array\+Size\+Input()}}, and \mbox{\hyperlink{class_shaker_sort_a6cf44c296698148811266a5eab27aadc}{start()}}.
+
+\mbox{\Hypertarget{class_shaker_sort_acb0b182e6df40176cf780504e1ddc444}\label{class_shaker_sort_acb0b182e6df40176cf780504e1ddc444}} 
+\index{ShakerSort@{ShakerSort}!getExecutionTime@{getExecutionTime}}
+\index{getExecutionTime@{getExecutionTime}!ShakerSort@{ShakerSort}}
+\doxysubsubsection{\texorpdfstring{getExecutionTime()}{getExecutionTime()}}
+{\footnotesize\ttfamily string Shaker\+Sort\+::get\+Execution\+Time (\begin{DoxyParamCaption}\item[{long \&}]{execution\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+creating an object of {\ttfamily ostringstream} class to stream the string into different variables.
+
+if execution\+Time is greater than 1000000L return value in millisecond
+
+elseif execution\+Time is greater than 1000L return value in microsecond
+
+else return value in nanoseconds
+\begin{DoxyCode}{0}
+\DoxyCodeLine{382                                                        \{}
+\DoxyCodeLine{383 }
+\DoxyCodeLine{384     ostringstream oss; }
+\DoxyCodeLine{385     oss << fixed << showpoint << setprecision(5);}
+\DoxyCodeLine{386 }
+\DoxyCodeLine{388     \textcolor{keywordflow}{if}(executionTime > 1000000L)\{}
+\DoxyCodeLine{389         oss << executionTime/1000000L << \textcolor{stringliteral}{"{} millisecond"{}};}
+\DoxyCodeLine{390     \}}
+\DoxyCodeLine{392     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(executionTime > 1000L) \{}
+\DoxyCodeLine{393         oss << executionTime/1000L << \textcolor{stringliteral}{"{} microseconds"{}};}
+\DoxyCodeLine{394     \}}
+\DoxyCodeLine{396     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{397         oss << executionTime << \textcolor{stringliteral}{"{} nanoseconds"{}};}
+\DoxyCodeLine{398     \}}
+\DoxyCodeLine{399     \textcolor{keywordflow}{return} oss.str();}
+\DoxyCodeLine{400 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{class_shaker_sort_a693841e67b54dd0c35145173e51e1a4b}{print\+Execution\+Time()}}.
+
+\mbox{\Hypertarget{class_shaker_sort_a04ff6a56f12e219624783901b4192d3a}\label{class_shaker_sort_a04ff6a56f12e219624783901b4192d3a}} 
+\index{ShakerSort@{ShakerSort}!getFileName@{getFileName}}
+\index{getFileName@{getFileName}!ShakerSort@{ShakerSort}}
+\doxysubsubsection{\texorpdfstring{getFileName()}{getFileName()}}
+{\footnotesize\ttfamily string Shaker\+Sort\+::get\+File\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+return the file name
+\begin{DoxyCode}{0}
+\DoxyCodeLine{337                                \{}
+\DoxyCodeLine{338     \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}shaker\_sort\_output.txt"{}}; }
+\DoxyCodeLine{339 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{class_shaker_sort_abedc1f3153f80b0ec047b65da6db07a7}{fill\+Array\+With\+Random\+Values()}}, and \mbox{\hyperlink{class_shaker_sort_a1ab376ba8f611823ae366bdb42239c3e}{read\+Array\+From\+File()}}.
+
+\mbox{\Hypertarget{class_shaker_sort_a81022f0bca715bdd5c1cb2542c84aef8}\label{class_shaker_sort_a81022f0bca715bdd5c1cb2542c84aef8}} 
+\index{ShakerSort@{ShakerSort}!printAsteriskLine@{printAsteriskLine}}
+\index{printAsteriskLine@{printAsteriskLine}!ShakerSort@{ShakerSort}}
+\doxysubsubsection{\texorpdfstring{printAsteriskLine()}{printAsteriskLine()}}
+{\footnotesize\ttfamily void Shaker\+Sort\+::print\+Asterisk\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+printing $\ast$ line to console
+\begin{DoxyCode}{0}
+\DoxyCodeLine{368                                    \{}
+\DoxyCodeLine{369     cout << \textcolor{stringliteral}{"{}***********************************************************"{}} << endl; }
+\DoxyCodeLine{370 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{class_shaker_sort_a693841e67b54dd0c35145173e51e1a4b}{print\+Execution\+Time()}}.
+
+\mbox{\Hypertarget{class_shaker_sort_a693841e67b54dd0c35145173e51e1a4b}\label{class_shaker_sort_a693841e67b54dd0c35145173e51e1a4b}} 
+\index{ShakerSort@{ShakerSort}!printExecutionTime@{printExecutionTime}}
+\index{printExecutionTime@{printExecutionTime}!ShakerSort@{ShakerSort}}
+\doxysubsubsection{\texorpdfstring{printExecutionTime()}{printExecutionTime()}}
+{\footnotesize\ttfamily void Shaker\+Sort\+::print\+Execution\+Time (\begin{DoxyParamCaption}\item[{long \&}]{,  }\item[{const std\+::string \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+print a $\ast$ line to console.
+
+print execution time to console.
+
+print a $\ast$ line to console.
+
+printing newline
+\begin{DoxyCode}{0}
+\DoxyCodeLine{352                                                                                \{}
+\DoxyCodeLine{353     \mbox{\hyperlink{class_shaker_sort_a81022f0bca715bdd5c1cb2542c84aef8}{printAsteriskLine}}(); }
+\DoxyCodeLine{354     cout << \textcolor{stringliteral}{"{}Execution time for "{}} << sortType << \textcolor{stringliteral}{"{} Shaker sort is: "{}} << \mbox{\hyperlink{class_shaker_sort_acb0b182e6df40176cf780504e1ddc444}{getExecutionTime}}(executionTime) << endl; }
+\DoxyCodeLine{355     \mbox{\hyperlink{class_shaker_sort_a81022f0bca715bdd5c1cb2542c84aef8}{printAsteriskLine}}(); }
+\DoxyCodeLine{356     cout << endl; }
+\DoxyCodeLine{357 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{class_shaker_sort_acb0b182e6df40176cf780504e1ddc444}{get\+Execution\+Time()}}, and \mbox{\hyperlink{class_shaker_sort_a81022f0bca715bdd5c1cb2542c84aef8}{print\+Asterisk\+Line()}}.
+
+
+
+Referenced by \mbox{\hyperlink{class_shaker_sort_acda1df8f4328c2bb08671a165e7371e2}{shaker\+Sort\+Ascending()}}, and \mbox{\hyperlink{class_shaker_sort_a55fca465b31ddb551f7e186d0b08837e}{shaker\+Sort\+Descending()}}.
+
+\mbox{\Hypertarget{class_shaker_sort_a1ab376ba8f611823ae366bdb42239c3e}\label{class_shaker_sort_a1ab376ba8f611823ae366bdb42239c3e}} 
+\index{ShakerSort@{ShakerSort}!readArrayFromFile@{readArrayFromFile}}
+\index{readArrayFromFile@{readArrayFromFile}!ShakerSort@{ShakerSort}}
+\doxysubsubsection{\texorpdfstring{readArrayFromFile()}{readArrayFromFile()}}
+{\footnotesize\ttfamily void Shaker\+Sort\+::read\+Array\+From\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+creating an object of input file stream to perform read operations. takes {\ttfamily \mbox{\hyperlink{class_shaker_sort_a04ff6a56f12e219624783901b4192d3a}{Shaker\+Sort\+::get\+File\+Name()}}} function as an argument which returns the file name.
+
+Checks if the file is NOT opened then throw an error and stop the program.
+
+throw is a keyword to define custom exceptions. We will 
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime\+\_\+error} & exception if the file is unable to open.\\
+\hline
+\end{DoxyExceptions}
+creating an array for shaker sort ascending order
+
+creating an array for shaker sort descending order
+
+creating a variable to store values from file after each iteration.
+
+creating a variable to loop through the array
+
+storing the value to array from stream
+
+storing the value to array from stream
+
+incrementing the index
+
+calling {\itshape \mbox{\hyperlink{class_shaker_sort_acda1df8f4328c2bb08671a165e7371e2}{Shaker\+Sort\+::shaker\+Sort\+Ascending}}} to sort the array
+
+calling {\itshape \mbox{\hyperlink{class_shaker_sort_a55fca465b31ddb551f7e186d0b08837e}{Shaker\+Sort\+::shaker\+Sort\+Descending}}} to sort the array
+\begin{DoxyCode}{0}
+\DoxyCodeLine{297                                    \{}
+\DoxyCodeLine{302     ifstream fileStream(\mbox{\hyperlink{class_shaker_sort_a04ff6a56f12e219624783901b4192d3a}{getFileName}}());}
+\DoxyCodeLine{303 }
+\DoxyCodeLine{305     \textcolor{keywordflow}{if} (!fileStream.is\_open()) \{}
+\DoxyCodeLine{310         \textcolor{keywordflow}{throw} invalid\_argument(\textcolor{stringliteral}{"{}Unable to read file."{}});}
+\DoxyCodeLine{311     \}}
+\DoxyCodeLine{312 }
+\DoxyCodeLine{313     \textcolor{keywordtype}{int} *shakerSortAscArray = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[\mbox{\hyperlink{class_shaker_sort_a94da472a9a0a954db5b1ec0bbae1cbe3}{SIZE\_OF\_ARRAY}}]; }
+\DoxyCodeLine{314     \textcolor{keywordtype}{int} *shakerSortDescArray = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[\mbox{\hyperlink{class_shaker_sort_a94da472a9a0a954db5b1ec0bbae1cbe3}{SIZE\_OF\_ARRAY}}]; }
+\DoxyCodeLine{315     \textcolor{keywordtype}{int} arrayElement; }
+\DoxyCodeLine{316     \textcolor{keywordtype}{int} index = 0U; }
+\DoxyCodeLine{317     \textcolor{keywordflow}{while}(fileStream >> arrayElement)\{}
+\DoxyCodeLine{318         shakerSortAscArray[index] = arrayElement; }
+\DoxyCodeLine{319         shakerSortDescArray[index] = arrayElement; }
+\DoxyCodeLine{320         index++; }
+\DoxyCodeLine{321     \}}
+\DoxyCodeLine{322 }
+\DoxyCodeLine{323     \mbox{\hyperlink{class_shaker_sort_acda1df8f4328c2bb08671a165e7371e2}{shakerSortAscending}}(shakerSortAscArray, \mbox{\hyperlink{class_shaker_sort_a94da472a9a0a954db5b1ec0bbae1cbe3}{SIZE\_OF\_ARRAY}}); }
+\DoxyCodeLine{324     \mbox{\hyperlink{class_shaker_sort_a55fca465b31ddb551f7e186d0b08837e}{shakerSortDescending}}(shakerSortDescArray, \mbox{\hyperlink{class_shaker_sort_a94da472a9a0a954db5b1ec0bbae1cbe3}{SIZE\_OF\_ARRAY}}); }
+\DoxyCodeLine{325 }
+\DoxyCodeLine{326 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{class_shaker_sort_a04ff6a56f12e219624783901b4192d3a}{get\+File\+Name()}}, \mbox{\hyperlink{class_shaker_sort_acda1df8f4328c2bb08671a165e7371e2}{shaker\+Sort\+Ascending()}}, \mbox{\hyperlink{class_shaker_sort_a55fca465b31ddb551f7e186d0b08837e}{shaker\+Sort\+Descending()}}, and \mbox{\hyperlink{class_shaker_sort_a94da472a9a0a954db5b1ec0bbae1cbe3}{SIZE\+\_\+\+OF\+\_\+\+ARRAY}}.
+
+
+
+Referenced by \mbox{\hyperlink{class_shaker_sort_a6cf44c296698148811266a5eab27aadc}{start()}}.
+
+\mbox{\Hypertarget{class_shaker_sort_ac4717afc4b962655e296d7c7acd1e47a}\label{class_shaker_sort_ac4717afc4b962655e296d7c7acd1e47a}} 
+\index{ShakerSort@{ShakerSort}!saveArrayToFile@{saveArrayToFile}}
+\index{saveArrayToFile@{saveArrayToFile}!ShakerSort@{ShakerSort}}
+\doxysubsubsection{\texorpdfstring{saveArrayToFile()}{saveArrayToFile()}}
+{\footnotesize\ttfamily void Shaker\+Sort\+::save\+Array\+To\+File (\begin{DoxyParamCaption}\item[{int}]{\mbox{[}$\,$\mbox{]},  }\item[{const std\+::string \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+creating an object of output file stream to perform write operations. takes {\ttfamily filename} as an argument.
+
+Checks if the file is NOT opened then throw an error and stop the program.
+
+throw is a keyword to define custom exceptions. We will 
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime\+\_\+error} & exception if the file is unable to open.\\
+\hline
+\end{DoxyExceptions}
+using for loop to iterate through array U as a suffix to 0 means only unsigned values
+
+store the array value to file.
+
+closing the {\ttfamily output\+Stream} after performing the write operations.
+\begin{DoxyCode}{0}
+\DoxyCodeLine{262                                                                           \{}
+\DoxyCodeLine{263 }
+\DoxyCodeLine{268     ofstream outputStream(fileName);}
+\DoxyCodeLine{269 }
+\DoxyCodeLine{271     \textcolor{keywordflow}{if} (!outputStream.is\_open()) \{}
+\DoxyCodeLine{276         \textcolor{keywordflow}{throw} invalid\_argument(\textcolor{stringliteral}{"{}Unable to open a file to write operations."{}});}
+\DoxyCodeLine{277     \}}
+\DoxyCodeLine{278 }
+\DoxyCodeLine{281     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0U; i < \mbox{\hyperlink{class_shaker_sort_a94da472a9a0a954db5b1ec0bbae1cbe3}{SIZE\_OF\_ARRAY}}; i++)\{}
+\DoxyCodeLine{282         outputStream << array[i] << \textcolor{stringliteral}{"{} "{}}; }
+\DoxyCodeLine{283     \}}
+\DoxyCodeLine{284 }
+\DoxyCodeLine{285     outputStream.close(); }
+\DoxyCodeLine{286 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{class_shaker_sort_a94da472a9a0a954db5b1ec0bbae1cbe3}{SIZE\+\_\+\+OF\+\_\+\+ARRAY}}.
+
+
+
+Referenced by \mbox{\hyperlink{class_shaker_sort_abedc1f3153f80b0ec047b65da6db07a7}{fill\+Array\+With\+Random\+Values()}}, \mbox{\hyperlink{class_shaker_sort_acda1df8f4328c2bb08671a165e7371e2}{shaker\+Sort\+Ascending()}}, and \mbox{\hyperlink{class_shaker_sort_a55fca465b31ddb551f7e186d0b08837e}{shaker\+Sort\+Descending()}}.
+
+\mbox{\Hypertarget{class_shaker_sort_acda1df8f4328c2bb08671a165e7371e2}\label{class_shaker_sort_acda1df8f4328c2bb08671a165e7371e2}} 
+\index{ShakerSort@{ShakerSort}!shakerSortAscending@{shakerSortAscending}}
+\index{shakerSortAscending@{shakerSortAscending}!ShakerSort@{ShakerSort}}
+\doxysubsubsection{\texorpdfstring{shakerSortAscending()}{shakerSortAscending()}}
+{\footnotesize\ttfamily void Shaker\+Sort\+::shaker\+Sort\+Ascending (\begin{DoxyParamCaption}\item[{int}]{array\mbox{[}$\,$\mbox{]},  }\item[{int}]{array\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+creating a bool flag to check base conditions of shaker sort
+
+storing the time point representing the current time in {\ttfamily start\+Time} variable.
+
+using for loop to iterate through array U as a suffix to 0 means only unsigned values
+
+setting flag to false by default.
+
+using for loop to iterate through array
+
+if the current element is greater than the next element then swap
+
+calling function {\itshape \mbox{\hyperlink{class_shaker_sort_a07fd65f2701fcdc9f952bef732e2b660}{Shaker\+Sort\+::swap}}} to swap values of 2 integers.
+
+setting flag to true if swap is occurred.
+
+if bool is set to false it means no swap is occurred so the loop will break as the array is already sorted.
+
+reducing array size so as to not include the sorted element in next iteration.
+
+setting flag to false by default for another loop.
+
+using for loop to iterate through array
+
+if the previous element is greater than the current element then swap
+
+calling function {\itshape \mbox{\hyperlink{class_shaker_sort_a07fd65f2701fcdc9f952bef732e2b660}{Shaker\+Sort\+::swap}}} to swap values of 2 integers.
+
+setting flag to true if swap is occurred.
+
+if bool is set to false it means no swap is occurred so the loop will break as the array is already sorted.
+
+storing the time point representing the current time in {\ttfamily end\+Time} variable.
+
+calculating the elapsed time in millisecond from start\+Time and end\+Time.
+
+calling {\itshape \mbox{\hyperlink{class_shaker_sort_a693841e67b54dd0c35145173e51e1a4b}{Shaker\+Sort\+::print\+Execution\+Time}}} to print the execution time.
+
+calling {\itshape \mbox{\hyperlink{class_shaker_sort_ac4717afc4b962655e296d7c7acd1e47a}{Shaker\+Sort\+::save\+Array\+To\+File}}} to save the array to a file.
+\begin{DoxyCode}{0}
+\DoxyCodeLine{119                                                                \{}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121     \textcolor{keywordtype}{bool} swapped; }
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123     \textcolor{keyword}{auto} startTime = high\_resolution\_clock::now(); }
+\DoxyCodeLine{124 }
+\DoxyCodeLine{127     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0U; i < arraySize; i++)\{}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{129         swapped = \textcolor{keyword}{false}; }
+\DoxyCodeLine{130 }
+\DoxyCodeLine{132         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = i; j < arraySize-\/1; j++)\{}
+\DoxyCodeLine{134             \textcolor{keywordflow}{if}(array[j] > array[j+1])\{}
+\DoxyCodeLine{135                 \mbox{\hyperlink{class_shaker_sort_a07fd65f2701fcdc9f952bef732e2b660}{swap}}(array[j], array[j+1]); }
+\DoxyCodeLine{136             \}}
+\DoxyCodeLine{137             swapped = \textcolor{keyword}{true}; }
+\DoxyCodeLine{138         \}}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{141         \textcolor{keywordflow}{if}(!swapped)}
+\DoxyCodeLine{142             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144         arraySize-\/-\/; }
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146         swapped = \textcolor{keyword}{false}; }
+\DoxyCodeLine{147 }
+\DoxyCodeLine{149         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = arraySize-\/1; j > i; j-\/-\/)\{}
+\DoxyCodeLine{151             \textcolor{keywordflow}{if}(array[j] < array[j-\/1])\{}
+\DoxyCodeLine{152                 \mbox{\hyperlink{class_shaker_sort_a07fd65f2701fcdc9f952bef732e2b660}{swap}}(array[j], array[j-\/1]);  }
+\DoxyCodeLine{153             \}}
+\DoxyCodeLine{154             swapped = \textcolor{keyword}{true}; }
+\DoxyCodeLine{155         \}}
+\DoxyCodeLine{156 }
+\DoxyCodeLine{158         \textcolor{keywordflow}{if}(!swapped)}
+\DoxyCodeLine{159             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{160     \}}
+\DoxyCodeLine{161 }
+\DoxyCodeLine{162     \textcolor{keyword}{auto} endTime = high\_resolution\_clock::now(); }
+\DoxyCodeLine{163 }
+\DoxyCodeLine{164     \textcolor{keywordtype}{long} executionTime = duration\_cast<nanoseconds>(endTime -\/ startTime).count(); }
+\DoxyCodeLine{165 }
+\DoxyCodeLine{166     \mbox{\hyperlink{class_shaker_sort_a693841e67b54dd0c35145173e51e1a4b}{printExecutionTime}}(executionTime, \textcolor{stringliteral}{"{}Ascending"{}}); }
+\DoxyCodeLine{167 }
+\DoxyCodeLine{168     \mbox{\hyperlink{class_shaker_sort_ac4717afc4b962655e296d7c7acd1e47a}{saveArrayToFile}}(array, \textcolor{stringliteral}{"{}shaker\_sort\_asc.txt"{}}); }
+\DoxyCodeLine{169 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{class_shaker_sort_a693841e67b54dd0c35145173e51e1a4b}{print\+Execution\+Time()}}, \mbox{\hyperlink{class_shaker_sort_ac4717afc4b962655e296d7c7acd1e47a}{save\+Array\+To\+File()}}, and \mbox{\hyperlink{class_shaker_sort_a07fd65f2701fcdc9f952bef732e2b660}{swap()}}.
+
+
+
+Referenced by \mbox{\hyperlink{class_shaker_sort_a1ab376ba8f611823ae366bdb42239c3e}{read\+Array\+From\+File()}}.
+
+\mbox{\Hypertarget{class_shaker_sort_a55fca465b31ddb551f7e186d0b08837e}\label{class_shaker_sort_a55fca465b31ddb551f7e186d0b08837e}} 
+\index{ShakerSort@{ShakerSort}!shakerSortDescending@{shakerSortDescending}}
+\index{shakerSortDescending@{shakerSortDescending}!ShakerSort@{ShakerSort}}
+\doxysubsubsection{\texorpdfstring{shakerSortDescending()}{shakerSortDescending()}}
+{\footnotesize\ttfamily void Shaker\+Sort\+::shaker\+Sort\+Descending (\begin{DoxyParamCaption}\item[{int}]{array\mbox{[}$\,$\mbox{]},  }\item[{int}]{array\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+creating a bool flag to check base conditions of shaker sort
+
+storing the time point representing the current time in {\ttfamily start\+Time} variable.
+
+using for loop to iterate through array U as a suffix to 0 means only unsigned values
+
+setting flag to false by default.
+
+using for loop to iterate through array
+
+if the current element is smaller than the next element then swap
+
+calling function {\itshape \mbox{\hyperlink{class_shaker_sort_a07fd65f2701fcdc9f952bef732e2b660}{Shaker\+Sort\+::swap}}} to swap values of 2 integers.
+
+setting flag to true if swap is occurred.
+
+if bool is set to false it means no swap is occurred so the loop will break as the array is already sorted.
+
+reducing array size so as to not include the sorted element in next iteration.
+
+setting flag to false by default for another loop.
+
+using for loop to iterate through array
+
+if the previous element is smaller than the current element then swap
+
+calling function {\itshape \mbox{\hyperlink{class_shaker_sort_a07fd65f2701fcdc9f952bef732e2b660}{Shaker\+Sort\+::swap}}} to swap values of 2 integers.
+
+setting flag to true if swap is occurred.
+
+if bool is set to false it means no swap is occurred so the loop will break as the array is already sorted.
+
+storing the time point representing the current time in {\ttfamily end\+Time} variable.
+
+calculating the elapsed time in millisecond from start\+Time and end\+Time.
+
+calling {\itshape \mbox{\hyperlink{class_shaker_sort_a693841e67b54dd0c35145173e51e1a4b}{Shaker\+Sort\+::print\+Execution\+Time}}} to print the execution time.
+
+calling {\itshape \mbox{\hyperlink{class_shaker_sort_ac4717afc4b962655e296d7c7acd1e47a}{Shaker\+Sort\+::save\+Array\+To\+File}}} to save the array to a file.
+\begin{DoxyCode}{0}
+\DoxyCodeLine{182                                                                 \{}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{184     \textcolor{keywordtype}{bool} swapped; }
+\DoxyCodeLine{185 }
+\DoxyCodeLine{186     \textcolor{keyword}{auto} startTime = high\_resolution\_clock::now(); }
+\DoxyCodeLine{187 }
+\DoxyCodeLine{190     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0U; i < arraySize; i++)\{}
+\DoxyCodeLine{191 }
+\DoxyCodeLine{192         swapped = \textcolor{keyword}{false}; }
+\DoxyCodeLine{193 }
+\DoxyCodeLine{195         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = i; j < arraySize-\/1; j++)\{}
+\DoxyCodeLine{197             \textcolor{keywordflow}{if}(array[j] < array[j+1])\{}
+\DoxyCodeLine{198                 \mbox{\hyperlink{class_shaker_sort_a07fd65f2701fcdc9f952bef732e2b660}{swap}}(array[j], array[j+1]); }
+\DoxyCodeLine{199             \}}
+\DoxyCodeLine{200             swapped = \textcolor{keyword}{true}; }
+\DoxyCodeLine{201         \}}
+\DoxyCodeLine{202 }
+\DoxyCodeLine{204         \textcolor{keywordflow}{if}(!swapped)}
+\DoxyCodeLine{205             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{206 }
+\DoxyCodeLine{207         arraySize-\/-\/; }
+\DoxyCodeLine{208 }
+\DoxyCodeLine{209         swapped = \textcolor{keyword}{false}; }
+\DoxyCodeLine{210 }
+\DoxyCodeLine{212         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = arraySize-\/1; j > i; j-\/-\/)\{}
+\DoxyCodeLine{214             \textcolor{keywordflow}{if}(array[j] > array[j-\/1])\{}
+\DoxyCodeLine{215                 \mbox{\hyperlink{class_shaker_sort_a07fd65f2701fcdc9f952bef732e2b660}{swap}}(array[j], array[j-\/1]);  }
+\DoxyCodeLine{216             \}}
+\DoxyCodeLine{217             swapped = \textcolor{keyword}{true}; }
+\DoxyCodeLine{218         \}}
+\DoxyCodeLine{219 }
+\DoxyCodeLine{221         \textcolor{keywordflow}{if}(!swapped)}
+\DoxyCodeLine{222             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{223     \}}
+\DoxyCodeLine{224 }
+\DoxyCodeLine{225     \textcolor{keyword}{auto} endTime = high\_resolution\_clock::now(); }
+\DoxyCodeLine{226 }
+\DoxyCodeLine{227     \textcolor{keywordtype}{long} executionTime = duration\_cast<nanoseconds>(endTime -\/ startTime).count(); }
+\DoxyCodeLine{228 }
+\DoxyCodeLine{229     \mbox{\hyperlink{class_shaker_sort_a693841e67b54dd0c35145173e51e1a4b}{printExecutionTime}}(executionTime, \textcolor{stringliteral}{"{}Descending"{}}); }
+\DoxyCodeLine{230 }
+\DoxyCodeLine{231     \mbox{\hyperlink{class_shaker_sort_ac4717afc4b962655e296d7c7acd1e47a}{saveArrayToFile}}(array, \textcolor{stringliteral}{"{}shaker\_sort\_desc.txt"{}}); }
+\DoxyCodeLine{232 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{class_shaker_sort_a693841e67b54dd0c35145173e51e1a4b}{print\+Execution\+Time()}}, \mbox{\hyperlink{class_shaker_sort_ac4717afc4b962655e296d7c7acd1e47a}{save\+Array\+To\+File()}}, and \mbox{\hyperlink{class_shaker_sort_a07fd65f2701fcdc9f952bef732e2b660}{swap()}}.
+
+
+
+Referenced by \mbox{\hyperlink{class_shaker_sort_a1ab376ba8f611823ae366bdb42239c3e}{read\+Array\+From\+File()}}.
+
+\mbox{\Hypertarget{class_shaker_sort_a6cf44c296698148811266a5eab27aadc}\label{class_shaker_sort_a6cf44c296698148811266a5eab27aadc}} 
+\index{ShakerSort@{ShakerSort}!start@{start}}
+\index{start@{start}!ShakerSort@{ShakerSort}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void Shaker\+Sort\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+calling {\itshape \mbox{\hyperlink{class_shaker_sort_adbd9eff499e03fb85baf930fb3970b31}{Shaker\+Sort\+::get\+Array\+Size\+Input}}} to get the array size
+
+calling {\itshape \mbox{\hyperlink{class_shaker_sort_abedc1f3153f80b0ec047b65da6db07a7}{Shaker\+Sort\+::fill\+Array\+With\+Random\+Values}}} to fill the array with random values
+
+calling {\itshape \mbox{\hyperlink{class_shaker_sort_a1ab376ba8f611823ae366bdb42239c3e}{Shaker\+Sort\+::read\+Array\+From\+File}}} to read file and perform shaker sort and calculate execution time.
+\begin{DoxyCode}{0}
+\DoxyCodeLine{49                        \{}
+\DoxyCodeLine{50     \mbox{\hyperlink{class_shaker_sort_adbd9eff499e03fb85baf930fb3970b31}{getArraySizeInput}}(); }
+\DoxyCodeLine{51     \mbox{\hyperlink{class_shaker_sort_abedc1f3153f80b0ec047b65da6db07a7}{fillArrayWithRandomValues}}(); }
+\DoxyCodeLine{52     \mbox{\hyperlink{class_shaker_sort_a1ab376ba8f611823ae366bdb42239c3e}{readArrayFromFile}}(); }
+\DoxyCodeLine{53 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{class_shaker_sort_abedc1f3153f80b0ec047b65da6db07a7}{fill\+Array\+With\+Random\+Values()}}, \mbox{\hyperlink{class_shaker_sort_adbd9eff499e03fb85baf930fb3970b31}{get\+Array\+Size\+Input()}}, and \mbox{\hyperlink{class_shaker_sort_a1ab376ba8f611823ae366bdb42239c3e}{read\+Array\+From\+File()}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}}.
+
+\mbox{\Hypertarget{class_shaker_sort_a07fd65f2701fcdc9f952bef732e2b660}\label{class_shaker_sort_a07fd65f2701fcdc9f952bef732e2b660}} 
+\index{ShakerSort@{ShakerSort}!swap@{swap}}
+\index{swap@{swap}!ShakerSort@{ShakerSort}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily void Shaker\+Sort\+::swap (\begin{DoxyParamCaption}\item[{int \&}]{item1,  }\item[{int \&}]{item2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+using a temporary variable to store the first value. ~\newline
+
+
+assigning the value of 2nd variable to first variable. ~\newline
+
+
+assigning the value of first variable stored in a temporary variable to the 2nd variable. ~\newline
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{245                                             \{}
+\DoxyCodeLine{246     \textcolor{keywordtype}{int} temp = item1; }
+\DoxyCodeLine{247     item1 = item2; }
+\DoxyCodeLine{248     item2 = temp; }
+\DoxyCodeLine{249 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{class_shaker_sort_acda1df8f4328c2bb08671a165e7371e2}{shaker\+Sort\+Ascending()}}, and \mbox{\hyperlink{class_shaker_sort_a55fca465b31ddb551f7e186d0b08837e}{shaker\+Sort\+Descending()}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_shaker_sort_a94da472a9a0a954db5b1ec0bbae1cbe3}\label{class_shaker_sort_a94da472a9a0a954db5b1ec0bbae1cbe3}} 
+\index{ShakerSort@{ShakerSort}!SIZE\_OF\_ARRAY@{SIZE\_OF\_ARRAY}}
+\index{SIZE\_OF\_ARRAY@{SIZE\_OF\_ARRAY}!ShakerSort@{ShakerSort}}
+\doxysubsubsection{\texorpdfstring{SIZE\_OF\_ARRAY}{SIZE\_OF\_ARRAY}}
+{\footnotesize\ttfamily int Shaker\+Sort\+::\+SIZE\+\_\+\+OF\+\_\+\+ARRAY\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+stores size of array ~\newline
+ 
+
+
+
+Referenced by \mbox{\hyperlink{class_shaker_sort_abedc1f3153f80b0ec047b65da6db07a7}{fill\+Array\+With\+Random\+Values()}}, \mbox{\hyperlink{class_shaker_sort_adbd9eff499e03fb85baf930fb3970b31}{get\+Array\+Size\+Input()}}, \mbox{\hyperlink{class_shaker_sort_a1ab376ba8f611823ae366bdb42239c3e}{read\+Array\+From\+File()}}, \mbox{\hyperlink{class_shaker_sort_ac4717afc4b962655e296d7c7acd1e47a}{save\+Array\+To\+File()}}, and \mbox{\hyperlink{class_shaker_sort_ada404564dee64277112d8d1f83c3dc2d}{Shaker\+Sort()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_shaker_sort_8h}{Shaker\+Sort.\+h}}\item 
+\mbox{\hyperlink{_shaker_sort_8cpp}{Shaker\+Sort.\+cpp}}\end{DoxyCompactItemize}

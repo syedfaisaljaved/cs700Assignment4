@@ -6,6 +6,7 @@
  * Student ID: 200491169 <br>
  ****************************/
 
+/// @brief user-defined header @file ShakerSort.h to propagate declarations to code file. <br>
 #include "ShakerSort.h"
 
 /*****************************
@@ -22,7 +23,7 @@ int main() {
     /// program execution starts here.
 
     ShakerSort shakerSort; /// creating an object of @a ShakerSort class
-    shakerSort.start(); /// calling the @a start() function of @a Shaker Sort class
+    shakerSort.start(); /// calling the @a ShakerSort::start() function of @a Shaker Sort class
     return 0; /// returns 0 if the program is executed successfully because main() has a return type of integer.
 
     /// program terminates here.
