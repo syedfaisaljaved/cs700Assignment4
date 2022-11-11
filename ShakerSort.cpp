@@ -151,7 +151,7 @@ void ShakerSort::shakerSortAscending(int array[], int arraySize) {
 
     long executionTime = duration_cast<nanoseconds>(endTime - startTime).count(); /// calculating the elapsed time in millisecond from startTime and endTime.
 
-    printExecutionTime(executionTime); /// calling @a printExecutionTime to print the execution time.
+    printExecutionTime(executionTime, "Ascending"); /// calling @a printExecutionTime to print the execution time.
 
     saveArrayToFile(array, "shaker_sort_asc"); /// calling @a saveArrayToFile to save the array to a file.
 }
@@ -214,7 +214,7 @@ void ShakerSort::shakerSortDescending(int array[], int arraySize) {
 
     long executionTime = duration_cast<nanoseconds>(endTime - startTime).count(); /// calculating the elapsed time in millisecond from startTime and endTime.
 
-    printExecutionTime(executionTime); /// calling @a printExecutionTime to print the execution time.
+    printExecutionTime(executionTime, "Descending"); /// calling @a printExecutionTime to print the execution time.
 
     saveArrayToFile(array, "shaker_sort_desc"); /// calling @a saveArrayToFile to save the array to a file.
 }
@@ -336,9 +336,9 @@ string ShakerSort::getFileName() {
  *          @pre Pre Condition - a double value is passed
  *          @post Post Condition - prints to console
  ****************************/
-void ShakerSort::printExecutionTime(long &executionTime) {
+void ShakerSort::printExecutionTime(long &executionTime, string sortType) {
     printDashedLine(); /// print a * line to console.
-    cout << "Execution time for Ascending Shaker sort is: " << getExecutionTime(executionTime) << endl; /// print execution time to console.
+    cout << "Execution time for " << sortType << " Shaker sort is: " << getExecutionTime(executionTime) << endl; /// print execution time to console.
     printDashedLine(); /// print a * line to console.
     cout << endl; /// printing newline
 }
