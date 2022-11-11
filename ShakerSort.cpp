@@ -149,7 +149,7 @@ void ShakerSort::shakerSortAscending(int array[], int arraySize) {
 
     auto endTime = high_resolution_clock::now(); /// storing the time point representing the current time in @c endTime variable.
 
-    double executionTime = duration_cast<microseconds>(endTime - startTime).count(); /// calculating the elapsed time in millisecond from startTime and endTime.
+    double executionTime = duration_cast<nanoseconds>(endTime - startTime).count(); /// calculating the elapsed time in millisecond from startTime and endTime.
 
     printExecutionTime(executionTime); /// calling @a printExecutionTime to print the execution time.
 
@@ -212,7 +212,7 @@ void ShakerSort::shakerSortDescending(int array[], int arraySize) {
 
     auto endTime = high_resolution_clock::now(); /// storing the time point representing the current time in @c endTime variable.
 
-    double executionTime = duration_cast<microseconds>(endTime - startTime).count(); /// calculating the elapsed time in millisecond from startTime and endTime.
+    double executionTime = duration_cast<nanoseconds>(endTime - startTime).count(); /// calculating the elapsed time in millisecond from startTime and endTime.
 
     printExecutionTime(executionTime); /// calling @a printExecutionTime to print the execution time.
 
@@ -363,10 +363,12 @@ ShakerSort::ShakerSort() {
 string ShakerSort::getExecutionTime(double &executionTime) {
     ostringstream oss;
     oss << fixed << showpoint << setprecision(5);
-    if(executionTime > 1000){
-        oss << executionTime/1000.0 << " millisecond";
+    if(executionTime > 1000000.0){
+        oss << executionTime/1000000.0 << " millisecond";
+    } else if(executionTime > 1000.0) {
+        oss << executionTime/1000.0 << " microseconds";
     } else {
-        oss << executionTime << " microseconds";
+        oss << executionTime << " nanoseconds";
     }
     return oss.str();
 }
