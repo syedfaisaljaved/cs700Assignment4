@@ -338,9 +338,9 @@ string ShakerSort::getFileName() {
  *          @post Post Condition - prints to console
  ****************************/
 void ShakerSort::printExecutionTime(long &executionTime, const string& sortType) {
-    printDashedLine(); /// print a * line to console.
+    printAsteriskLine(); /// print a * line to console.
     cout << "Execution time for " << sortType << " Shaker sort is: " << getExecutionTime(executionTime) << endl; /// print execution time to console.
-    printDashedLine(); /// print a * line to console.
+    printAsteriskLine(); /// print a * line to console.
     cout << endl; /// printing newline
 }
 
@@ -353,7 +353,7 @@ void ShakerSort::printExecutionTime(long &executionTime, const string& sortType)
  *          @return [out] void
  *          @post Post Condition - print to console
  ****************************/
-void ShakerSort::printDashedLine() {
+void ShakerSort::printAsteriskLine() {
     cout << "***********************************************************" << endl; /// printing * line to console
 }
 

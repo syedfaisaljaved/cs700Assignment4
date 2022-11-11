@@ -32,7 +32,7 @@
  *          @fn readArrayFromFile
  *          @fn getFileName
  *          @fn printExecutionTime
- *          @fn printDashedLine
+ *          @fn printAsteriskLine
  *          @fn getExecutionTime
  *          @fn start
  * */
@@ -40,18 +40,19 @@ class ShakerSort {
 
     /// member variables and functions which are private
 private:
-    int SIZE_OF_ARRAY;
-    void fillArrayWithRandomValues();
-    void shakerSortAscending(int[], int);
-    void shakerSortDescending(int[], int);
-    static void swap(int &, int &);
-    void getArraySizeInput();
-    void saveArrayToFile(int [], const std::string&) const;
-    void readArrayFromFile();
-    static std::string getFileName();
-    static void printExecutionTime(long &, const std::string&);
-    static void printDashedLine();
-    static std::string getExecutionTime(long &);
+    int SIZE_OF_ARRAY; /// stores size of array
+    void fillArrayWithRandomValues(); /// fill array with random values
+    void shakerSortAscending(int[], int); /// sort array using shaker sort algo in ascending order
+    void shakerSortDescending(int[], int); /// sort array using shaker sort algo in descending order
+    static void swap(int &, int &); /// swap 2 values
+    void getArraySizeInput(); /// get array size from input
+    void saveArrayToFile(int [], const std::string&) const; /// save array to file
+    void readArrayFromFile(); /// read file and store into an array
+    static std::string getFileName(); /// get file name
+    static void printExecutionTime(long &, const std::string&); /// print execution time
+    static void printAsteriskLine(); /// print * line
+    static std::string getExecutionTime(long &); /// gets execution time in milliseconds, microseconds and nanoseconds
+
     /// member variables and functions which are public
 public:
     /**
@@ -60,6 +61,6 @@ public:
      * @post Post Condition - initialize @a SIZE_OF_ARRAY to 0.
      * */
     ShakerSort();
-    void start();
+    void start(); /// this is the base function to run the all other functions of this class after creating an object of this class.
 };
 
