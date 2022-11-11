@@ -10,9 +10,9 @@
 #include <chrono> /// A framework that relates a time point to real physical time. The library provides at least three clocks that provide means to express the current time.  <br>
 #include <cstdlib> /// library that offers reliable and efficient functions for dynamic memory allocation, conversion between datatypes, pseudo-random number generation, process control, searching and sorting, math, and multibyte or wide characters. <br>
 #include <iomanip> /// library which helps us in manipulating the output of the program. <br>
-#include <fstream> /// library that implements high-level input/output operations on file based streams.
-#include <sstream> /// library that implements high-level input/output operations on file based streams.
-#include "ShakerSort.h" /// user-defined header @file ShakerSort.h to propagate declarations to code file.
+#include <fstream> /// library that implements high-level input/output operations on file based streams. <br>
+#include <sstream> /// library that allows performing insertion, extraction, and other operations for parsing inputs and converting strings to numbers, and vice-versa. <br>
+#include "ShakerSort.h" /// user-defined header @file ShakerSort.h to propagate declarations to code file. <br>
 
 /**
  * 'namespace' is used to organise the names of program entities. <br>
@@ -332,11 +332,12 @@ string ShakerSort::getFileName() {
  * Date of Creation: 10th November, 2022 <br>
  * Purpose: the function prints the argument to the console with other information <br>
  *          @param [in] executionTime
+ *          @param [in] sortType
  *          @return [out] void
- *          @pre Pre Condition - a double value is passed
+ *          @pre Pre Condition - a double value and a string is passed
  *          @post Post Condition - prints to console
  ****************************/
-void ShakerSort::printExecutionTime(long &executionTime, string sortType) {
+void ShakerSort::printExecutionTime(long &executionTime, const string& sortType) {
     printDashedLine(); /// print a * line to console.
     cout << "Execution time for " << sortType << " Shaker sort is: " << getExecutionTime(executionTime) << endl; /// print execution time to console.
     printDashedLine(); /// print a * line to console.
@@ -356,19 +357,36 @@ void ShakerSort::printDashedLine() {
     cout << "***********************************************************" << endl; /// printing * line to console
 }
 
-ShakerSort::ShakerSort() {
-    SIZE_OF_ARRAY = 0; /// variable @a ShakerSort::SIZE_OF_ARRAY is initialized in the constructor.
-}
-
+/*****************************
+ * Module Name: Shaker Sort. <br>
+ * Author: Faisal Javed <br>
+ * Date of Creation: 10th November, 2022 <br>
+ * Purpose: the function returns a string in formatted fashion <br>
+ *          @param [in] executionTime
+ *          @return [out] string
+ *          @pre Pre Condition - a long value is passed
+ *          @post Post Condition - returns a string
+ ****************************/
 string ShakerSort::getExecutionTime(long &executionTime) {
-    ostringstream oss;
+
+    ostringstream oss; /// creating an object of @c ostringstream class to stream the string into different variables.
     oss << fixed << showpoint << setprecision(5);
-    if(executionTime > 1000000.0){
-        oss << executionTime/1000000.0 << " millisecond";
-    } else if(executionTime > 1000.0) {
-        oss << executionTime/1000.0 << " microseconds";
-    } else {
+
+    /// @if executionTime is greater than 1000000L return value in millisecond
+    if(executionTime > 1000000L){
+        oss << executionTime/1000000L << " millisecond";
+    }
+    /// @elseif executionTime is greater than 1000L return value in microsecond
+    else if(executionTime > 1000L) {
+        oss << executionTime/1000L << " microseconds";
+    }
+    /// @else return value in nanoseconds
+    else {
         oss << executionTime << " nanoseconds";
     }
     return oss.str();
+}
+
+ShakerSort::ShakerSort() {
+    SIZE_OF_ARRAY = 0; /// variable @a ShakerSort::SIZE_OF_ARRAY is initialized in the constructor.
 }

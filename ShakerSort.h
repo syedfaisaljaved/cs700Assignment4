@@ -33,6 +33,7 @@
  *          @fn getFileName
  *          @fn printExecutionTime
  *          @fn printDashedLine
+ *          @fn getExecutionTime
  *          @fn start
  * */
 class ShakerSort {
@@ -48,7 +49,7 @@ private:
     void saveArrayToFile(int [], const std::string&) const;
     void readArrayFromFile();
     static std::string getFileName();
-    void printExecutionTime(long &, std::string);
+    static void printExecutionTime(long &, const std::string&);
     static void printDashedLine();
     static std::string getExecutionTime(long &);
     /// member variables and functions which are public
