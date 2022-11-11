@@ -11,6 +11,7 @@
 #include <cstdlib> /// library that offers reliable and efficient functions for dynamic memory allocation, conversion between datatypes, pseudo-random number generation, process control, searching and sorting, math, and multibyte or wide characters. <br>
 #include <iomanip> /// library which helps us in manipulating the output of the program. <br>
 #include <fstream> /// library that implements high-level input/output operations on file based streams.
+#include <sstream> /// library that implements high-level input/output operations on file based streams.
 #include "ShakerSort.h" /// user-defined header @file ShakerSort.h to propagate declarations to code file.
 
 /**
@@ -337,7 +338,7 @@ string ShakerSort::getFileName() {
  ****************************/
 void ShakerSort::printExecutionTime(double &executionTime) {
     printDashedLine(); /// print a * line to console.
-    cout << "Execution time for Ascending Shaker sort is: " << fixed << showpoint << setprecision(5) << executionTime << " microseconds" << endl; /// print execution time to console.
+    cout << "Execution time for Ascending Shaker sort is: " << getExecutionTime(executionTime) << endl; /// print execution time to console.
     printDashedLine(); /// print a * line to console.
     cout << endl; /// printing newline
 }
@@ -357,4 +358,15 @@ void ShakerSort::printDashedLine() {
 
 ShakerSort::ShakerSort() {
     SIZE_OF_ARRAY = 0; /// variable @a ShakerSort::SIZE_OF_ARRAY is initialized in the constructor.
+}
+
+string ShakerSort::getExecutionTime(double &executionTime) {
+    ostringstream oss;
+    oss << fixed << showpoint << setprecision(5);
+    if(executionTime > 1000){
+        oss << executionTime/1000.0 << " millisecond";
+    } else {
+        oss << executionTime << " microseconds";
+    }
+    return oss.str();
 }

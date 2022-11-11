@@ -48,9 +48,9 @@ private:
     void saveArrayToFile(int [], const std::string&) const;
     void readArrayFromFile();
     static std::string getFileName();
-    static void printExecutionTime(double &);
+    void printExecutionTime(double &);
     static void printDashedLine();
-    double getExecutionTime();
+    std::string getExecutionTime(double &);
     /// member variables and functions which are public
 public:
     /**
