@@ -13,6 +13,8 @@
   * */
 #pragma once
 
+#include <iostream> /// library that controls reading from and writing to the standard streams. <br>
+
 /**
  * <br><br> Module Name: Shaker Sort. <br>
  * Author: Faisal Javed <br>

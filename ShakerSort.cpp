@@ -107,7 +107,7 @@ void ShakerSort::shakerSortAscending(int array[], int arraySize) {
 
     bool swapped; /// creating a bool flag to check base conditions of shaker sort
 
-    auto startTime = steady_clock::now(); /// storing the time point representing the current time in @c startTime variable.
+    auto startTime = high_resolution_clock::now(); /// storing the time point representing the current time in @c startTime variable.
 
     /// using for loop to iterate through array
     /// U as a suffix to 0 means only unsigned values
@@ -146,7 +146,7 @@ void ShakerSort::shakerSortAscending(int array[], int arraySize) {
             break;
     }
 
-    auto endTime = steady_clock::now(); /// storing the time point representing the current time in @c endTime variable.
+    auto endTime = high_resolution_clock::now(); /// storing the time point representing the current time in @c endTime variable.
 
     double executionTime = duration_cast<microseconds>(endTime - startTime).count(); /// calculating the elapsed time in millisecond from startTime and endTime.
 
@@ -170,7 +170,7 @@ void ShakerSort::shakerSortDescending(int array[], int arraySize) {
 
     bool swapped; /// creating a bool flag to check base conditions of shaker sort
 
-    auto startTime = steady_clock::now(); /// storing the time point representing the current time in @c startTime variable.
+    auto startTime = high_resolution_clock::now(); /// storing the time point representing the current time in @c startTime variable.
 
     /// using for loop to iterate through array
     /// U as a suffix to 0 means only unsigned values
@@ -209,7 +209,7 @@ void ShakerSort::shakerSortDescending(int array[], int arraySize) {
             break;
     }
 
-    auto endTime = steady_clock::now(); /// storing the time point representing the current time in @c endTime variable.
+    auto endTime = high_resolution_clock::now(); /// storing the time point representing the current time in @c endTime variable.
 
     double executionTime = duration_cast<microseconds>(endTime - startTime).count(); /// calculating the elapsed time in millisecond from startTime and endTime.
 
